@@ -4,15 +4,21 @@
     <script src="script.js"></script>
     <script src="myController.js"></script>
 <body>
-<div ng-app="myApp" w3-test-directive>
-    <!-- <div ng-controller='myController'>
-        <p>First Name: <input type="text" ng-model="firstName"></p>
-        <p>Last Name: <input type="text" ng-model="lastName"></p>
-        <p>Full Name: {{firstName + ' ' + lastName}}</p>
-    </div> -->
+
+    <!-- ng-app - определяет корневой элемент -->
+    <!-- ng-init - определяет начальные значения -->
+<div ng-app="myApp" ng-init='names=["Jani", "Hege", "Kai"]'>
+
+    <!-- ng-repeat работает как forEach (перебирает) -->
+    <li ng-repeat='name in names'>
+        {{name}}
+    </li>
+
+    <!-- также можно создавать свои директивы -->
+    <!-- можно выщывать директиву используя 4 варианта -->
+    <!-- как элемент, класс, атрибут, комментарий -->
+<w3-test-directive></w3-test-directive>
+
 </div>
-<div ng-app="" ng-init="myCol='lightblue'">
-    <input style="background-color:{{myCol}}" ng-model="myCol">
-    </div>
 </body>
 </html>
