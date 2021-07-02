@@ -3,12 +3,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="script.js"></script>
 <body>
-<div ng-app="myApp">
+<!-- <div ng-app="myApp">
     <div ng-controller='myController'>
         <p>First Name: <input type="text" ng-model="firstName"></p>
         <p>Last Name: <input type="text" ng-model="lastName"></p>
         <p>Full Name: {{firstName + ' ' + lastName}}</p>
     </div>
-</div>
+</div> -->
+<div ng-app="" ng-init="myCol='lightblue'">
+    <input style="background-color:{{myCol}}" ng-model="myCol">
+    </div>
 </body>
 </html>
