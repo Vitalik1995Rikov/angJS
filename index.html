@@ -5,11 +5,9 @@
     <script src="myController.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
-
-<!-- меняет стили в зависимости от статуса формы (touch, focus, ...) -->
-<div ng-app="" name="myForm" >
-    Enter your name:
-    <input name="myName" ng-model="myText" required>
+    <!-- привязка данных -->
+<div ng-app="myApp" ng-controller="myController">
+    <h1 ng-click="changeName()">{{firstName}}</h1>
 </div>
 </body>
 </html>

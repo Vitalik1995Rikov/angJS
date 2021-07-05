@@ -1,3 +1,6 @@
 myApp.controller('myController', function($scope) {
-    $scope.name = 'John Doe';
+    $scope.firstName = 'John';
+    $scope.changeName = function() {
+        $scope.firstName = 'Nelly';
+    };
 });
