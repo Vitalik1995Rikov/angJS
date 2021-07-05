@@ -5,15 +5,9 @@
     <script src="myController.js"></script>
     <script src="namesController.js"></script>
 <body>
-
-    <!-- фильтрует относительно введенного в инпут значения -->
     <div ng-app="myApp" ng-controller="namesController">
-        <input type="text" ng-model="test">
-        <ul>
-            <li ng-repeat="person in names | filter: test">
-                {{person.name + " " + person.country}}
-            </li>
-        </ul>
+        <p>After 2 sec change text</p>
+        <p>{{myHeader}}</p>
     </div>
 </body>
 </html>
