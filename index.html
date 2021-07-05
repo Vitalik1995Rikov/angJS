@@ -6,13 +6,9 @@
     <link rel="stylesheet" href="style.css">
 <body>
     <div ng-app="myApp" ng-controller="myController">
-        <table>
-            <tr ng-repeat="person in names | orderBy: 'lastname'">
-                <td>{{ $index + 1 }}</td>
-                <td>{{ person.name }}</td>
-                <td>{{ person.lastname }}</td>
-            </tr>
-          </table>
+        <select ng-model="selectedName" ng-options="x for (x, y) in names"></select>
+        <h1>Name: {{selectedName.name}}</h1>
+        <h2>Surname: {{selectedName.lastname}}</h1>
     </div>
 </body>
 </html>
