@@ -8,3 +8,4 @@
 + model
 + databinding
 + controllers
++ scope

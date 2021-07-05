@@ -5,10 +5,17 @@
     <script src="myController.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
-    <div ng-app="myApp" ng-controller="myController">
-        First Name: <input type="text" ng-model="firstName"><br>
-        Last Name: <input type="text" ng-model="lastName"><br>
-        FullName: {{fullName()}}
-    </div>
+    <!-- сначала ищет значение в своем scope, затем в глобальном -->
+    <div ng-app="myApp">
+        <p>Root scope</p>
+        <h1>{{color}}</h1>
+        <div ng-controller="myController">
+            <h1>{{carname}}</h1>
+            <p>Controller's scope</p>
+            <h1>{{color}}</h1>
+        </div>
+        <p>Still Root scope</p>
+        <h1>{{color}}</h1>
+        </div>
 </body>
 </html>
