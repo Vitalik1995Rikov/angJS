@@ -5,34 +5,15 @@
     <script src="myController.js"></script>
     <script src="namesController.js"></script>
 <body>
-    <div ng-app="myApp">
-        <div ng-controller="myController">
-            <p>His name is {{firstName | uppercase}}</p>
-            <p>His surname is {{lastName | lowercase}}</p>
-        </div>
-    
-        <!-- Выведем просто как есть -->
-        <div ng-controller="namesController">
-            <ul>
-                <li ng-repeat="person in names">
-                    {{'Name: ' + person.name + ', Country: ' + person.country}}
-                </li>
-            </ul>
-            <br>
-            <!-- Добавим фильтр по стране -->
-            <ul>
-                <li ng-repeat="person in names | orderBy: 'country'">
-                    {{'Name: ' + person.name + ', Country: ' + person.country}}
-                </li>
-            </ul>
-            <br>
-            <!-- Добавим фильтр по присутствию конкретной буквы -->
-            <ul>
-                <li ng-repeat="person in names | filter: 'i'">
-                    {{person.name}}
-                </li>
-            </ul>
-        </div>
+
+    <!-- фильтрует относительно введенного в инпут значения -->
+    <div ng-app="myApp" ng-controller="namesController">
+        <input type="text" ng-model="test">
+        <ul>
+            <li ng-repeat="person in names | filter: test">
+                {{person.name + " " + person.country}}
+            </li>
+        </ul>
     </div>
 </body>
 </html>
