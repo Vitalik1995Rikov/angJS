@@ -9,3 +9,4 @@
 + databinding
 + controllers
 + scope
++ filters
