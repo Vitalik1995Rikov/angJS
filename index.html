@@ -3,22 +3,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="script.js"></script>
     <script src="myController.js"></script>
+    <link rel="stylesheet" href="style.css">
 <body>
 
-    <!-- ng-app - определяет корневой элемент -->
-    <!-- ng-init - определяет начальные значения -->
-<div ng-app="myApp" ng-init='names=["Jani", "Hege", "Kai"]'>
-
-    <!-- ng-repeat работает как forEach (перебирает) -->
-    <li ng-repeat='name in names'>
-        {{name}}
-    </li>
-
-    <!-- также можно создавать свои директивы -->
-    <!-- можно выщывать директиву используя 4 варианта -->
-    <!-- как элемент, класс, атрибут, комментарий -->
-<w3-test-directive></w3-test-directive>
-
+<!-- меняет стили в зависимости от статуса формы (touch, focus, ...) -->
+<div ng-app="" name="myForm" >
+    Enter your name:
+    <input name="myName" ng-model="myText" required>
 </div>
 </body>
 </html>
