@@ -5,9 +5,10 @@
     <script src="myController.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
-    <!-- привязка данных -->
-<div ng-app="myApp" ng-controller="myController">
-    <h1 ng-click="changeName()">{{firstName}}</h1>
-</div>
+    <div ng-app="myApp" ng-controller="myController">
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        FullName: {{fullName()}}
+    </div>
 </body>
 </html>

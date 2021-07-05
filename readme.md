@@ -6,3 +6,5 @@
 + module
 + directive
 + model
++ databinding
++ controllers
