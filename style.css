@@ -11,3 +11,10 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
   background-color: #ffffff;
 }
+
+form.ng-pristine {
+  background-color: lightblue;
+}
+form.ng-dirty {
+  background-color: pink;
+}

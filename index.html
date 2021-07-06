@@ -6,40 +6,12 @@
     <link rel="stylesheet" href="style.css">
 <body>
     <div ng-app="myApp">
-
-        <!-- binding -->
-        <form ng-controller="myController">
-            <input type="text" ng-model="firstName">
-            <p>{{firstName}}</p>
+        <form name="myForm">
+            <input name="myInput" ng-model="myInput" required>
         </form>
-
-        <!-- checkbox -->
-        <form>
-            <input type="checkbox" ng-model="myValue">
+        <form ng-dirty>
+            <input type="text" value="text">
         </form>
-        <p ng-show="myValue">Paragraph</p>
-
-        <!-- radio buttons -->
-        <form>
-            <input type="radio" ng-model="myVar" value="dogs">Dogs
-            <input type="radio" ng-model="myVar" value="cats">Cats
-            <input type="radio" ng-model="myVar" value="lions">Lions
-        </form>
-        <div ng-switch="myVar">
-            <div ng-switch-when="dogs">
-                <h1>Dogs</h1>
-                <p>Dogs life is an interesing ...</p>
-            </div>
-            <div ng-switch-when="cats">
-                <h1>Cats</h1>
-                <p>Cat's doesnot ...</p>
-            </div>
-            <div ng-switch-when="lions">
-                <h1>Lions</h1>
-                <p>Lions life is another ...</p>
-            </div>
-        </div>
-
     </div>
 </body>
 </html>
