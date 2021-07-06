@@ -3,38 +3,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="script.js"></script>
     <script src="myController.js"></script>
-    <script src="clickController.js"></script>
-    <script src="toogleController.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
     <div ng-app="myApp">
 
-        <div ng-controller="myController">
-            <h1 ng-mouseover='count = count + 1'>
-                Проведи мышью
-            </h1>
-            <h1>{{count}}</h1>
-        </div>
+        <!-- binding -->
+        <form ng-controller="myController">
+            <input type="text" ng-model="firstName">
+            <p>{{firstName}}</p>
+        </form>
 
-        <div ng-controller="clickController">
-            <h1 ng-click="countClick = countClick + 1">
-                Кликни
-            </h1>
-            <h1>{{countClick}}</h1>
-            <!-- Также можно через функцию -->
-            <h1 ng-click="myFunction()">
-                Click me
-            </h1>
-        </div>
+        <!-- checkbox -->
+        <form>
+            <input type="checkbox" ng-model="myValue">
+        </form>
+        <p ng-show="myValue">Paragraph</p>
 
-        <!-- показать / скрыть содержимое -->
-        <div ng-controller="toogleController">
-            <button ng-click="funcToogle()">Toogle</button>
-            <div ng-show='showMe'>
-                <p>Menu:</p>
-                <p>One</p>
-                <p>Two</p>
-                <p>Three</p>
+        <!-- radio buttons -->
+        <form>
+            <input type="radio" ng-model="myVar" value="dogs">Dogs
+            <input type="radio" ng-model="myVar" value="cats">Cats
+            <input type="radio" ng-model="myVar" value="lions">Lions
+        </form>
+        <div ng-switch="myVar">
+            <div ng-switch-when="dogs">
+                <h1>Dogs</h1>
+                <p>Dogs life is an interesing ...</p>
+            </div>
+            <div ng-switch-when="cats">
+                <h1>Cats</h1>
+                <p>Cat's doesnot ...</p>
+            </div>
+            <div ng-switch-when="lions">
+                <h1>Lions</h1>
+                <p>Lions life is another ...</p>
             </div>
         </div>
 

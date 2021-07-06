@@ -1,3 +1,3 @@
 myApp.controller('myController', function($scope) {
-    $scope.count = 0;
+    $scope.firstName = "John";
 });
