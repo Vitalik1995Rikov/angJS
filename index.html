@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.css">
     
 <body>
-    <div ng-app="myApp">
+    <div ng-app="myApp" layout="column" layout-align="center center">
         <div ng-controller="myController">
             <h2>My shopping list</h2>
             <ul>
@@ -19,23 +19,14 @@
                     {{product}}<span ng-click="removeItem($index)"> ×</span>
                 </li>
             </ul>
-            <input ng-model="addMe">
-            <button ng-click="addItem()">Add</button>
+            <md-input-container>
+                <input ng-model="addMe">
+            </md-input-container>
+            <md-button ng-click="addItem()" class="md-raised">Add</md-button>
             <p>{{errortext}}</p>
         </div>
 
-        <div>
-            <md-button>Button</md-button>
-            <br>
-            <md-checkbox>Checkbox</md-checkbox>
-            <br>
-            <md-button class="md-primary">Click me</md-button>
-            <br>
-            <md-button class="md-accent">or maybe me</md-button>
-            <br>
-            <md-button class="md-warn">Careful</md-button>
-        </div>
-
+        
     </div>
 </body>
 </html>
