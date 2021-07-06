@@ -5,10 +5,15 @@
     <script src="myController.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
-    <div ng-app="myApp" ng-controller="myController">
-        <select ng-model="selectedName" ng-options="x for (x, y) in names"></select>
-        <h1>Name: {{selectedName.name}}</h1>
-        <h2>Surname: {{selectedName.lastname}}</h1>
+    <div ng-app="myApp">
+        
+        <!-- показывает / скрывает -->
+       <p ng-show="true">I am visible</p>
+       <p ng-show="false">I am not visible</p>
+
+       <!--наоборот скрывает / показывает -->
+       <p ng-hide="true">I am not visible</p>
+       <p ng-hide="false">I am visible</p>
     </div>
 </body>
 </html>
