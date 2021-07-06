@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="style.css">
 <body>
     <div ng-app="myApp">
-        <form name="myForm">
-            <input name="myInput" ng-model="myInput" required>
-        </form>
-        <form ng-dirty>
-            <input type="text" value="text">
-        </form>
+        <div ng-controller="myController">
+            <p>{{firstName}}</p>
+            <p>{{firstNameUpper}}</p>
+            <p>{{firstNameString}}</p>
+            <p>{{firstNameNumber}}</p>
+        </div>
     </div>
 </body>
 </html>
