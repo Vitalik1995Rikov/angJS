@@ -20,3 +20,4 @@
 + forms validate
 + angular API
 + ng-include
++ angular animation

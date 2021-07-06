@@ -1,1 +1,1 @@
-let myApp = angular.module('myApp', []);
+let myApp = angular.module('myApp', ['ngAnimate']);

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>    
     <script src="script.js"></script>
     <script src="myController.js"></script>
+    <link rel="stylesheet" href="style.css">
 <body>
     <div ng-app="myApp">
-        <div ng-controller="myController">
-            <p>{{firstName}}</p>
-            <p>{{firstNameUpper}}</p>
-            <p>{{firstNameString}}</p>
-            <p>{{firstNameNumber}}</p>
-        </div>
-        <div ng-include="'myFile.htm'"></div>
+        <h1> Hide DIV
+            <input type="checkbox" ng-model="myValue">
+        </h1>
+        <div ng-hide="myValue"></div>
     </div>
 </body>
 </html>
